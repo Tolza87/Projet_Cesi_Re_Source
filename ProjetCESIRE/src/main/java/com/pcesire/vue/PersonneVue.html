@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des personnes</title>
+</head>
+<body>
+<h1>Liste des personnes</h1>
+<ul id="personnesList"></ul>
+<script>
+        // Utilisez JavaScript pour récupérer les données du contrôleur et les afficher
+        fetchPersonnes();
+
+        async function fetchPersonnes() {
+            const response = await fetch('/votre-endpoint-de-contrôleur');
+            const personnes = await response.json();
+
+            const personnesListElement = document.getElementById('personnesList');
+            personnes.forEach(personne => {
+                const li = document.createElement('li');
+                li.textContent = personne;
+                personnesListElement.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

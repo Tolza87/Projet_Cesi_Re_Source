@@ -1,4 +1,4 @@
-package com.pcesire.demo;
+package com.pcesire.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,5 @@ public class ProjetCesireApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetCesireApplication.class, args);
 	}
-
 }
+

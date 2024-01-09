@@ -13,7 +13,7 @@
         fetchPersonnes();
 
         async function fetchPersonnes() {
-            const response = await fetch('/votre-endpoint-de-contrôleur');
+            const response = await fetch('/personnes');
             const personnes = await response.json();
 
             const personnesListElement = document.getElementById('personnesList');
